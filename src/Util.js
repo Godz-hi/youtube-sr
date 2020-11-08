@@ -133,7 +133,8 @@ class Util {
     static parseVideo(data = {}) {
         if (!data || !data.videoRenderer) return;
 
-        const badge = data.videoRenderer.ownerBadges && data.videoRenderer.ownerBadges[0];
+        const badge = data.videoRenderer.ownerBadges && data.videoRenderer.ownerBadges[0];\
+        console.log(data.videoRenderer)
         let res = new Video({
             id: data.videoRenderer.videoId,
             url: `https://www.youtube.com/watch?v=${data.videoRenderer.videoId}`,
